@@ -1,0 +1,168 @@
+
+
+SpringBoot - with Grails, ..... Thymleaf to create full stack application
+
+Actuator - Performance - memory and speed.
+                 Thread mngmt; 
+                 Hal Browser - to test GET and POST 
+
+**** Spring Boot Starters - One of them is Netflix OSS stack
+
+**** Node.js Microservices Architecture using Docker for developers - 
+
+https://medium.com/@tkssharma/node-js-microservices-architecture-using-docker-for-developers-
+
+95d1d7e407b2
+
+**** Spring Initializr - Hateoas (Resource linking)
+
+**** return type - Optional
+
+public Optional<Customer> getCustomerById(long id) {
+	return repo.findById(id).orElse(null);
+}
+
+CORS-original
+@CrossOrigin(*) - Request Sharing across sites running on different servers
+
+mongod...server... 3.6..bin>mongod --dbpath="G:\Local disk\CGIMicroservice\mongodatabase"
+
+database: monogd --dbpath="C:\mondodb"
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+
+C:\mongodbtest\mongodb-win32-x86_64-2008plus-ssl-3.6.11\bin>
+
+mongo -> run mongo
+
+C:\mongodbtest\mongodb-win32-x86_64-2008plus-ssl-3.6.11\bin>mongo
+MongoDB shell version v3.6.11
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("07f3c51c-1726-4bab-bac6-d49cc755ead2")
+}
+MongoDB server version: 3.6.11
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+
+> show dbs;
+admin    0.000GB
+cgimsdb  0.000GB
+config   0.000GB
+local    0.000GB
+
+> show collections;
+
+> use cgimsdb
+switched to db cgimsdb
+
+> show collections;
+customers
+
+> db.customers.find();
+> db.customers.find();
+{ "_id" : ObjectId("5c99fe0e78870615a051808b"), "customerId" : NumberLong(10), "
+firstName" : "Tulasi", "lastName" : "Nadukula", "address" : "", "mobileNo" : Num
+berLong("8142437208"), "dob" : "", "_class" : "com.cgi.banking.models.CustomerNo
+SQL" }
+{ "_id" : ObjectId("5c99fe3278870615a051808c"), "customerId" : NumberLong(0), "f
+irstName" : "Tulasi", "lastName" : "Nadukula", "address" : "Boduppal", "mobileNo
+" : NumberLong("8142467895"), "dob" : "", "_class" : "com.cgi.banking.models.Cus
+tomerNoSQL" }
+{ "_id" : ObjectId("5c99fed47887062a48712a47"), "customerId" : NumberLong(0), "m
+obileNo" : NumberLong(0), "_class" : "com.cgi.banking.models.CustomerNoSQL" }
+{ "_id" : ObjectId("5c99ff327887062a48712a48"), "customerId" : NumberLong(0), "f
+irstName" : "Tulasi", "lastName" : "Nadukula", "address" : "Boduppal", "mobileNo
+" : NumberLong(123), "dob" : "1980-Sep-12", "_class" : "com.cgi.banking.models.C
+ustomerNoSQL" }
+{ "_id" : ObjectId("5c99ffbe7887062a48712a49"), "customerId" : NumberLong(123454
+444), "firstName" : "Tulasi", "lastName" : "Nadukula", "address" : "Boduppal", "
+mobileNo" : NumberLong("8142467208"), "dob" : "1983-Sep-12", "_class" : "com.cgi
+.banking.models.CustomerNoSQL" }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+
+
+*** Histrics
+
+
+*** Canary testing
+       If we have to test for 10K or 20K users we have to pick few samples and then test
+
+*** Small Autonomous services running together
+
+*** Micro Services should be at Architecture Level. Not just implementation level.
+       Distributed Architecture
+       Depends on even service bus
+
+*** Saga Design Pattern
+
+*** Auto scaling and Load Balancing
+       AWS, Azure provide Auto Scaling
+
+*** Places API - Ola uses it to inform Google  about the Device location
+
+*** Kubernet with Docker => provides all the Micor Services features without using Cloud
+
+*** Public cloud and Private cloud
+
+*** Replica Sets
+
+*** Monolithic -> SOA (Service Oriented Architecture) -> Micro Services
+
+*** Hiper-V feature; Hipervisor to manage Virtual Machines
+
+*** Splunk for debugging; ELK Stack
+
+*** X-Axis Scaling and Y-Axis Scaling
+
+*** Event Choreography is used in AWS Lambda
+
+*** Application name (application) and Variant (dev/prod)
+     application.properties
+     application-dev.properties
+     application-prod.properties
+
+*** docker - tool for managing and deploying microservices
+
+
+ *** docker pull mongo
+        docker run --name database -d -h 192.168.99.100 -p 27017:27017 mongo
+    
+*** To create an image - mvn clean package dockerfile:build - Command prompt of project folder
+Remove image - docker rmi dockerbankingapp:latest
+
+>docker images ---- from the docker toolbox
+
+
+> docker run -h 192.168.99.100 -p 6060:6060 --name demo-app --link database:mongo -d bankingdockerapp
+
+container name = demo-app
+db- container name = database:mongo
+image = bankingdockerapp
+
+**** ZuulFilter
+
+*** http://rpscustomerapp.us-east-1.elasticbeanstalk.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
